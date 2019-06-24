@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+/**
+ * This file is part of Codelegacy_InstanceReminder for Magento.
+ *
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author Alex P <alexander@codelegacy> <@>
+ * @category Codelegacy
+ * @package Codelegacy_InstanceReminder
+ * @copyright Copyright (c) 2019 Codelegacy 
+ */
+-->
+<config>
+    <tabs>
+        <codelegacy_instancereminder translate="label" module="codelegacy_instancereminder">
+            <label>Codelegacy</label>
+            <sort_order>100</sort_order>
+        </codelegacy_instancereminder>
+    </tabs>
+    <sections>
+        <codelegacy_instancereminder translate="label" module="codelegacy_instancereminder">
+            <label>Instance Reminder</label>
+            <tab>codelegacy_instancereminder</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <instance_reminder translate="label" module="codelegacy_instancereminder">
+                    <label>Instance Reminder</label>
+                    <frontend_type>text</frontend_type>
+                    <expanded>1</expanded>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label comment" module="codelegacy_instancereminder">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <instance translate="label comment" module="codelegacy_instancereminder">
+                            <label>Instance</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>codelegacy_instancereminder/source_instance</source_model>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </instance>
+                        <custom_instance translate="label" module="codelegacy_instancereminder">
+                            <label>Custom Instance</label>
+                            <frontend_type>text</frontend_type>
+                            <depends>
+                                <enabled>1</enabled>
+                                <instance>custom</instance>
+                            </depends>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom_instance>
+                        <dev translate="label" module="codelegacy_instancereminder">
+                            <label>Development Reminder Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <depends>
+                                <instance>develop</instance>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </dev>
+                        <preprod translate="label" module="codelegacy_instancereminder">
+                            <label>Preprod Reminder Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <depends>
+                                <instance>preprod</instance>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </preprod>
+                        <production translate="label" module="codelegacy_instancereminder">
+                            <label>Production Reminder Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <depends>
+                                <instance>production</instance>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </production>
+                        <custom translate="label" module="codelegacy_instancereminder">
+                            <label>Custom Reminder Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <depends>
+                                <instance>custom</instance>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom>
+                    </fields>
+                </instance_reminder>
+            </groups>
+        </codelegacy_instancereminder>
+    </sections>
+</config>

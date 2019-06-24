@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * This file is part of Codelegacy_InstanceReminder for Magento.
+ *
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author Alex P <alexander@codelegacy> <@>
+ * @category Codelegacy
+ * @package Codelegacy_InstanceReminder
+ * @copyright Copyright (c) 2019 Codelegacy 
+ */
+-->
+<config>
+    <modules>
+        <Codelegacy_InstanceReminder>
+            <version>1.1.0</version>
+        </Codelegacy_InstanceReminder>
+    </modules>
+    <global>
+        <models>
+            <codelegacy_instancereminder>
+                <class>Codelegacy_InstanceReminder_Model</class>
+            </codelegacy_instancereminder>
+        </models>
+        <helpers>
+            <codelegacy_instancereminder>
+                <class>Codelegacy_InstanceReminder_Helper</class>
+            </codelegacy_instancereminder>
+        </helpers>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <codelegacy_instancereminder module="Codelegacy_InstanceReminder">
+                    <file>codelegacy/instancereminder.xml</file>
+                </codelegacy_instancereminder>
+            </updates>
+        </layout>
+        <events>
+            <controller_action_predispatch_adminhtml_index_login>
+                <observers>
+                    <codelegacy_instancereminder>
+                        <class>codelegacy_instancereminder/observer</class>
+                        <method>setFlag</method>
+                    </codelegacy_instancereminder>
+                </observers>
+            </controller_action_predispatch_adminhtml_index_login>
+        </events>
+    </adminhtml>
+    <default>
+        <codelegacy_instancereminder>
+            <instance_reminder>
+                <enabled>1</enabled>
+                <instance>develop</instance>
+                <dev>FFFFFF</dev>
+                <preprod>FFFFFF</preprod>
+                <production>FFFFFF</production>
+                <custom>FFFFFF</custom>
+            </instance_reminder>
+        </codelegacy_instancereminder>
+    </default>
+</config>

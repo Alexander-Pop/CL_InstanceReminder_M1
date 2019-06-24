@@ -1,0 +1,9 @@
+#Codelegacy_InstanceReminder
+app/etc/modules/Codelegacy_InstanceReminder.xml app/etc/modules/Codelegacy_InstanceReminder.xml
+app/code/community/Codelegacy/InstanceReminder app/code/community/Codelegacy/InstanceReminder
+app/design/adminhtml/default/default/layout/codelegacy/instancereminder.xml app/design/adminhtml/default/default/layout/codelegacy/instancereminder.xml
+app/design/adminhtml/default/default/template/codelegacy/instancereminder app/design/adminhtml/default/default/template/codelegacy/instancereminder
+skin/adminhtml/default/default/codelegacy/instancereminder skin/adminhtml/default/default/codelegacy/instancereminder
+skin/adminhtml/default/default/images/codelegacy skin/adminhtml/default/default/images/codelegacy
+js/codelegacy/instancereminder js/codelegacy/instancereminder
+
